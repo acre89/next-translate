@@ -1,0 +1,402 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+
+.logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.nav-style {
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1),
+    inset 0 -4px 2px rgba(0, 0, 0, 0.05),
+    inset 0 4px 2px rgba(255, 255, 255, 0.25),
+    inset 4px 4px 26px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(40px);
+}
+
+.home-page {
+  background-image: url("../public/bg.png");
+  background-size: cover;
+  width: screen;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+@media screen and (min-width:1536px) {
+  .home-page{
+    background-size: cover;
+    width: screen;
+    overflow-x: visible;
+  }
+}
+.title-h1 {
+  font-size: 31px;
+  font-weight: bold;
+}
+
+.title-h1::before {
+  content: "";
+  display: inline-block;
+  margin-right: 17px;
+  height: 25px;
+  width: 25px;
+  background-color: #2a3691;
+}
+
+.fixed-card {
+  box-shadow: 0 9.8px 14.32px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.fixed-card::before {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: #51bbed;
+  left: -7px;
+  top: -7px;
+
+  transform: translateZ(-1px);
+}
+.fixed-card::after {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: #51bbed;
+  right: -7px;
+  bottom: -7px;
+  transform: translateZ(-1px);
+}
+
+@media screen and (max-witdth:1280px){
+  
+  
+  .animate-card::before {
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: #51bbed;
+    left: -7px;
+    top: -7px;
+    
+    transform: translateZ(-1px);
+  }
+  .animate-card::after {
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: #51bbed;
+    right: -7px;
+    bottom: -7px;
+    transform: translateZ(-1px);
+  }
+  .animate-text,
+  .animate-span {
+    opacity: 0;
+  }
+  .animate-card:hover {
+  
+    .animate-text {
+      animation-name: texte;
+      animation-duration: 0.5s;
+      opacity: 1;
+    }
+    .animate-span {
+      animation-name: subtext;
+      animation-duration: 0.5s;
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width:1280px){
+  .animate-card {
+    height: 180px;
+    width: 310px;
+
+    z-index: 20;
+    transition: height 0.5s ease;
+
+  }
+  
+  .animate-text,
+  .animate-span {
+    opacity: 0;
+  }
+  .animate-card:hover {
+    height: 334px;
+    .animate-text {
+      animation-name: texte;
+      animation-duration: 0.5s;
+      opacity: 1;
+    }
+    .animate-span {
+      animation-name: subtext;
+      animation-duration: 0.5s;
+      opacity: 1;
+    }
+  }
+  
+}
+.animate-card::before {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: #51bbed;
+  left: -7px;
+  top: -7px;
+  transform: translateZ(-1px);
+}
+.animate-card {
+  box-shadow: 0 9.8px 14.32px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+@keyframes texte {
+  from {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes subtext {
+  from {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.15;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+#acquisition-card,
+#cession-card {
+  box-shadow: 0 9.8px 14.32px rgba(0, 0, 0, 0.25);
+  transform-style: preserve-3d;
+}
+#acquisition-card::before {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: 16px;
+  background-color: #51bbed;
+  left: -5px;
+  top: -5px;
+  transform: translateZ(-1px);
+}
+
+#acquisition-card::after {
+  content: "";
+  position: absolute;
+  height: calc(100% + 12px);
+  width: 50px;
+  background-color: transparent;
+  right: -6px;
+  top: -6px;
+  transform: translateZ(-1px);
+
+  border-top: solid 50px #51bbed;
+  border-bottom: solid 50px #51bbed;
+}
+
+#cession-card::before {
+  content: "";
+  position: absolute;
+
+  height: calc(100% + 12px);
+  width: 50px;
+  background-color: transparent;
+  left: -6px;
+  top: -6px;
+  transform: translateZ(-1px);
+
+  border-top: solid 50px #51bbed;
+  border-bottom: solid 50px #51bbed;
+}
+#cession-card::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: 16px;
+  background-color: #51bbed;
+  right: -5px;
+  bottom: -5px;
+  transform: translateZ(-1px);
+}
+
+.deco1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+
+.deco2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#cube {
+  transform-style: preserve-3d;
+}
+
+
+
+#line1 {
+  background: rgb(42, 54, 145);
+  background: linear-gradient(
+    90deg,
+    rgba(42, 54, 145, 0) 0%,
+    rgba(42, 54, 145, 1) 50%,
+    rgba(42, 54, 145, 0) 100%
+  );
+}
+
+#line2 {
+  background: rgb(42, 54, 145);
+  background: linear-gradient(
+    0deg,
+    rgba(42, 54, 145, 0) 0%,
+    rgba(42, 54, 145, 1) 50%,
+    rgba(42, 54, 145, 0) 100%
+  );
+}
+
+.interline{
+  background: rgb(42, 54, 145);
+  background: linear-gradient(
+    90deg,
+    rgba(42, 54, 145, 0) 0%,
+    rgba(42, 54, 145, 1) 50%,
+    rgba(42, 54, 145, 0) 100%
+  );
+}
+
+.num-container {
+  position: relative;
+  transform-style: preserve-3d;
+}
+.num-container::before {
+  content: "";
+  position: absolute;
+  height: 64px;
+  width: 80px;
+  background-color: #51bbed;
+  left: -5px;
+  top: -5px;
+
+  transform: translateZ(-1px);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #fafafa inset !important;
+}
+
+label {
+  transition: all 0.2s ease;
+}
+.input-container:focus-within {
+  > label {
+    transform: translateY(-28px);
+    font-size: small;
+  }
+}
+
+label {
+  cursor: text;
+  .input-container:has(input:not([value=""]):not(:focus)) & {
+    transform: translateY(-28px);
+    font-size: small;
+  }
+  .input-container:has(textarea:not(:empty):not(:focus)) & {
+    transform: translateY(-28px);
+    font-size: small;
+  }
+}
+
+.bullet-point::before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  height: 5px;
+  width: 5px;
+  background-color: #2a3691;
+  z-index: 10;
+}
+
+.down-button{
+  transform-origin: 50% 50%;
+}
+
+.flag{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.lang-select{
+  background-color: transparent;
+}
+
+.profile-image{
+  background-image: url("../public/Laurent Durante.jpg");
+}
+
+.profile-image-gradient{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%,
+
+  );
+}
+.selector{
+  position: absolute;
+  background: #51bbed;
+  height: 100%;
+  width: 240px;
+  left: 0px;
+  bottom: 0;
+  color: white;
+  z-index: 0;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+#first-h2, #second-h2{
+  transition: all 0.5s ease;
+}
+#first-h2{
+  color: white;
+}
+#second-h2{
+  color: black;
+}

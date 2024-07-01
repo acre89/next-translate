@@ -1,0 +1,59 @@
+{
+    "navbar":{
+        "acceuil":"Accueil", 
+        "equipe":"L'équipe", 
+        "savoir_faire":"Savoir-faire", 
+        "realisations":"Réalisations", 
+        "contact":"Nous contacter"
+    },
+    "cta":{
+        "titre": "Une question ?",
+        "text": "Nous serons très heureux de prendre connaissance de vos projets et de vous fournir toute information.", 
+        "button":"Nous contacter"
+    },
+    "footer":{
+        "cgu":"CGU", 
+        "mentions": "Mentions légales"
+    }, 
+    "accueil":{
+        "titre": "Professionnels du M&A", 
+        "sous_titre":"Une question ? Besoin d'un renseignement ?", 
+        "plus":"En savoir plus",
+        "decouvrir":"Nous découvrir",
+        "block1_titre":"L'équipe", 
+        "block1_des":"Un aperçu de l'équipe et de nos collaborateurs",
+        "block2_titre":"Savoir-faire",
+        "block2_des":"Un aperçu de notre savoir-faire et de nos méthodes de travail", 
+        "block3_titre":"Réalisations", 
+        "block3_des":"Un aperçu de nos réalisations récentes et des opérations traitées"
+    }, 
+    "equipe":{
+        "titre":"Qui sommes nous ?",
+        "description": "Diplômé d’Arts & Métiers ParisTech en 1998, d’un DEA de Mécanique des Fluides en 1998 et du mastère Entrepreneurs de Grenoble EM en 1999. <br /> <br /> Fusion-acquisition depuis 2009 : Financière de Courcelles (1999-2007), Trianon Corporate Finance (2007-2010), Création de DLEA Finance en 2010. Conseil d’une cinquantaine d’opérations.", 
+        "more":"DLEA Finance a noué depuis 2017 un partenariat avec Mahé Finance, avec laquelle elle réalise une partie significative de ses opérations de conseil. Mahé Finance est animée par Hubert Leclercq, ancien président de la Financière de Courcelles."
+    }, 
+    "savoir_faire":{
+        "titre": "Notre Savoir-faire",
+        "cession_titre":"Projets de cession",
+        "cession_des": "Tâches symétriques à celles des opérations d’acquisition, mais dans l’intérêt des actionnaires cédants, avec de plus réalisation d’info-mémos, teasers, BP, et de l’ensemble des documents d’information de l’opération (notamment organisation des data rooms)"
+    }, 
+    "realisations":{
+        "titre":"Nos réalisations", 
+        "description": "Au cours des 5 dernières années, Mahé Finance et DLEA Finance ont réalisé :", 
+        "element1_titre":"Opérations en tant que conseils d’actionnaires cédants.", 
+        "element1_des":"Sociétés entre 2 et 30 M€ de CA",
+        "element2_titre":"Opérations en tant que conseils d’un acquéreur.", 
+        "element2_des":"Sociétés entre 5 et 50 M€ de CA", 
+        "element3_titre":"Évaluations indépendantes.", 
+        "element3_des":"Sociétés entre 10 et 300 M€ de CA", 
+        "element4_titre":"Opérations en tant que conseils en fusion.", 
+        "element4_des":"Sociétés d’un CA supérieur à 200 M€"
+    }, 
+    "contact":{
+        "titre":"Nous contacter",
+        "description": "Nous serons très heureux de prendre connaissance de vos projets et de vous fournir toute information. Notre adresse mail est contact@dleafinance.fr ou vous pouvez nous contacter via le formulaire ci-dessous :", 
+        "nom":"Nom",
+        "prenom": "Prénom", 
+        "envoyer": "Envoyer" 
+    }
+}
