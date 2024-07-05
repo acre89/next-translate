@@ -29,7 +29,8 @@
     }, 
     "equipe":{
         "titre":"Qui sommes nous ?",
-        "description": "Diplômé d’Arts & Métiers ParisTech en 1998, d’un DEA de Mécanique des Fluides en 1998 et du mastère Entrepreneurs de Grenoble EM en 1999. <br /> <br /> Fusion-acquisition depuis 2009 : Financière de Courcelles (1999-2007), Trianon Corporate Finance (2007-2010), Création de DLEA Finance en 2010. Conseil d’une cinquantaine d’opérations.", 
+        "description": "Diplômé d’Arts & Métiers ParisTech en 1998, d’un DEA de Mécanique des Fluides en 1998 et du mastère Entrepreneurs de Grenoble EM en 1999. ", 
+        "description_suite": "Fusion-acquisition depuis 2009 : Financière de Courcelles (1999-2007), Trianon Corporate Finance (2007-2010), Création de DLEA Finance en 2010. Conseil d’une cinquantaine d’opérations.",
         "more":"DLEA Finance a noué depuis 2017 un partenariat avec Mahé Finance, avec laquelle elle réalise une partie significative de ses opérations de conseil. Mahé Finance est animée par Hubert Leclercq, ancien président de la Financière de Courcelles."
     }, 
     "savoir_faire":{

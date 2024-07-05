@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 32 32" xml:space="preserve">
+     <style type="text/css">
+	.st0{fill:none;stroke:#51BBED;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.animate-dart{
+	}
+    </style>
+    <animate attributeName begin="0s" dur="8s" from />
+    <line  transform="" class="st0 animate-dart" x1="16" y1="16" x2="22" y2="10"/>
+    <polygon class="st0 animate-dart" points="30,6 26,6 26,2 22,6 22,10 26,10 "/>
+</svg>

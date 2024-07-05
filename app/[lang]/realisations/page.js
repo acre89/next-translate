@@ -10,7 +10,7 @@ export default async function Missions({params}) {
   return (
     <>
       <Navbar isActive="3" dict={t.navbar} lang={params.lang} />
-      <div className="h-fit lg:h-dvh">
+      <div className="h-fit lg:h-dvh bg-background">
         <div className="pt-48 px-6 sm:px-14 md:px-28 ">
           <h1 className="title-h1">{t.realisations.titre}</h1>
           <p className="py-10 lg:mb-10">{t.realisations.description}</p>
