@@ -1,27 +1,33 @@
 "use client";
-
+import { useState } from "react";
 export default function ProjectCard({params}){
     const acquisition = [
-      "Identification des cibles",
-      "Conseil lors des approches",
-      "Analyse financière",
-      "Examen des BP fournis",
-      "Structuration de LOI",
-      "Suivi des audits",
-      "Négociation des termes clés du contrat d’acquisition, et des termes clés de la garantie de passif",
-      "Négociation finale du prix (notamment calcul du BFR normatif, des ajustements finaux du prix, des schémas d’earn-outs, etc.).",
+      "Identification et approche des cibles",
+      "Analyse financière et stratégique des cibles",
+      "Préparation des lettres d’intention",
+      "Assistance dans la négociation de la structuration financière et juridique de l’acquisition (prix, garantie de passif, etc.)",
+      "Suivi des audits et de la préparation de la documentation juridique",
     ];
 
+    const cession = [
+      "Préparation de l’ensemble des documents d’information de l’opération (info-mémos, teasers, BP, organisation de la data room…).",
+      "Identification et approche des acquéreurs potentiels",
+      "Assistance dans la négociation des offres reçues lors des étapes successives du process (prix, garanties, modalités de paiement, etc.) ",
+      "Suivi des audits et de la rédaction de la documentation juridique jusqu’au closing.",
+
+    ];
+
+    const [activeList, setActiveList] = useState(acquisition); 
 
     async function handleChangeProject(id){
       if (id == "acquisition") {
-        document.getElementById("cession-point").style.visibility = "hidden";
+        setActiveList(acquisition); 
         document.getElementById("selector").style.left = "0px";
         document.getElementById("first-h2").style.color = "white";
         document.getElementById("second-h2").style.color = "black";
         
       } else {
-        document.getElementById("cession-point").style.visibility = "visible";
+        setActiveList(cession); 
         document.getElementById("selector").style.left = "240px";
         document.getElementById("first-h2").style.color = "black";
         document.getElementById("second-h2").style.color = "white";
@@ -40,15 +46,10 @@ export default function ProjectCard({params}){
                   <h3 id="second-h2" className=" text-xl w-[240px] font-bold text-center ">Projets de cessions</h3>
                 </button>
               </div>
-              <ul>
-                {acquisition.map((item) => (
+              <ul className="h-fit">
+                {activeList.map((item) => (
                   <li className="bullet-point my-3">{item}</li>
                 ))}
-                <li id="cession-point" className="bullet-point invisible font-bold">
-                  Réalisation d’info-mémos, teasers, BP, et de l’ensemble
-                  des documents d’information de l’opération (notamment
-                  organisation des data rooms).
-                </li>
               </ul>
             </div>
         </>

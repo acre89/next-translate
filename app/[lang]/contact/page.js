@@ -14,7 +14,7 @@ export default async function Contact({params}) {
   return (
     <>
       <Navbar isActive="4" dict={t.navbar} lang={params.lang} />
-      <div className=" min-h-screen h-fit bg-background">
+      <div className=" min-h-screen 2xl:w-[1536px]  2xl:mx-auto  h-fit bg-background">
         <div className="pt-48 px-6 sm:px-14 md:px-28 ">
           <h1 className="title-h1">{t.contact.titre}</h1>
           <p className="pt-10">{t.contact.description}</p>

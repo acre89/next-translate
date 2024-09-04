@@ -8,7 +8,7 @@
     },
     "cta":{
         "titre": "Une question ?",
-        "text": "Nous serons très heureux de prendre connaissance de vos projets et de vous fournir toute information.", 
+        "text": "Nous serons très heureux de prendre connaissance de vos projets.", 
         "button":"Nous contacter"
     },
     "footer":{
@@ -16,11 +16,11 @@
         "mentions": "Mentions légales"
     }, 
     "accueil":{
-        "titre": "Professionnels du M&A", 
+        "titre": "Conseil M&A | Évaluation indépendante", 
         "sous_titre":"Une question ? Besoin d'un renseignement ?", 
         "plus":"En savoir plus",
         "decouvrir":"Nous découvrir",
-        "block1_titre":"L'équipe", 
+        "block1_titre":"À propos", 
         "block1_des":"Un aperçu de l'équipe et de nos collaborateurs",
         "block2_titre":"Savoir-faire",
         "block2_des":"Un aperçu de notre savoir-faire et de nos méthodes de travail", 
@@ -28,9 +28,9 @@
         "block3_des":"Un aperçu de nos réalisations récentes et des opérations traitées"
     }, 
     "equipe":{
-        "titre":"Qui sommes nous ?",
-        "description": "Diplômé d’Arts & Métiers ParisTech en 1998, d’un DEA de Mécanique des Fluides en 1998 et du mastère Entrepreneurs de Grenoble EM en 1999. ", 
-        "description_suite": "Fusion-acquisition depuis 2009 : Financière de Courcelles (1999-2007), Trianon Corporate Finance (2007-2010), Création de DLEA Finance en 2010. Conseil d’une cinquantaine d’opérations.",
+        "titre":"À propos",
+        "description": "Diplômé d’Arts & Métiers ParisTech\n en 1998, d’un DEA de Mécanique des Fluides en 1998 et du mastère Entrepreneurs de Grenoble EM en 1999. ", 
+        "description_suite": "Fusion-acquisition depuis 1999 : Financière de Courcelles (1999-2007), Trianon Corporate Finance (2007-2010), Création de DLEA Finance en 2010. Conseil d’une cinquantaine d’opérations de transmission de PME de tous secteurs d’activité et réalisation d’une centaine d’évaluations..",
         "more":"DLEA Finance a noué depuis 2017 un partenariat avec Mahé Finance, avec laquelle elle réalise une partie significative de ses opérations de conseil. Mahé Finance est animée par Hubert Leclercq, ancien président de la Financière de Courcelles."
     }, 
     "savoir_faire":{
@@ -52,7 +52,7 @@
     }, 
     "contact":{
         "titre":"Nous contacter",
-        "description": "Nous serons très heureux de prendre connaissance de vos projets et de vous fournir toute information. Notre adresse mail est contact@dleafinance.fr ou vous pouvez nous contacter via le formulaire ci-dessous :", 
+        "description": "Nous serons très heureux de prendre connaissance de vos projets. Notre adresse mail est contact@dleafinance.fr ou vous pouvez nous contacter via le formulaire ci-dessous :", 
         "nom":"Nom",
         "prenom": "Prénom", 
         "envoyer": "Envoyer" 

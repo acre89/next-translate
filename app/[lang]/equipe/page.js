@@ -9,7 +9,7 @@ export default async function Equipe({ params }) {
 
   return (
     <>
-      <div className="w-screen bg-background 2xl:w-[1536px] 2xl:m-auto">
+      <div className="w-screen min-h-screen bg-background 2xl:w-[1536px] 2xl:m-auto">
         <Navbar isActive="1" lang={params.lang} dict={t.navbar} />
         <div className="h-fit">
           <div className="px-6 sm:px-14 md:px-28 pt-48 pb-20">
@@ -37,9 +37,9 @@ export default async function Equipe({ params }) {
             <p className="pt-20">{t.equipe.more}</p>
           </div>
         </div>
+      </div>
         <CTA dict={t.cta} />
         <Footer dict={t.footer} />
-      </div>
     </>
   );
 }

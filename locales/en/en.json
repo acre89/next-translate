@@ -8,7 +8,7 @@
     },
     "cta":{
         "titre": "Any questions?",
-        "text": "We look forward to hearing about your projects and providing you with all the information you need.", 
+        "text": "We look forward to hearing about your projects.", 
         "button":"Contact us"
     },
     "footer":{
@@ -16,11 +16,11 @@
         "mentions": "Terms of use"
     }, 
     "accueil":{
-        "titre": "M&A professionals", 
+        "titre": "M&A Consulting | Independent Valuation", 
         "sous_titre":"Have a question? Need more information?", 
         "plus":"More",
         "decouvrir":"About us",
-        "block1_titre":"Team", 
+        "block1_titre":"About", 
         "block1_des":"An overview of the team and our collaborators",
         "block2_titre":"Know-how",
         "block2_des":"An overview of our know-how and working methods", 
@@ -30,7 +30,7 @@
     "equipe":{
         "titre":"About us",
         "description": "Graduated from Arts & Métiers ParisTech in 1998, with a postgraduate degree in Fluid Mechanics in 1998 and a Master's degree in Entrepreneurship from Grenoble EM in 1999.", 
-        "description_suite":"Mergers and acquisitions since 1999: Financière de Courcelles (1999-2007), Trianon Corporate Finance (2007-2010), Creation of DLEA Finance in 2010. Advised about fifty transactions.", 
+        "description_suite":"Mergers and acquisitions since 1999: Financière de Courcelles (1999-2007), Trianon Corporate Finance (2007-2010), Creation of DLEA Finance in 2010. Advising on some fifty SME buyouts in all business sectors, and carrying out around a hundred valuations..", 
         "more":"Since 2017, DLEA Finance has entered a partnership with Mahé Finance, with which it carries out a significant part of its advisory operations. Mahé Finance is led by Hubert Leclercq, former president of Financière de Courcelles."
     }, 
     "savoir_faire":{
@@ -52,7 +52,7 @@
     }, 
     "contact":{
         "titre":"Contact us",
-        "description": "We look forward to hearing about your projects and providing you with any information you may require. Our e-mail address is contact@dleafinance.fr or you can contact us using the form below:", 
+        "description": "We look forward to hearing about your projects. Our e-mail address is contact@dleafinance.fr or you can contact us using the form below:", 
         "nom":"Last Name",
         "prenom": "First Name", 
         "envoyer": "Send" 
