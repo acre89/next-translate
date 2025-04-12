@@ -3,15 +3,16 @@ import Navbar from "../components/navbar";
 import CTA from "../components/cta";
 import ProjectCard from "../components/ProjetCard";
 import Footer from "../components/footer";
+
 export default async function Savoir({ params }) {
   let t = await getDictionary(params.lang);
 
   const evaluation = [
     "Fairness opinion",
-    "Calculs de parité",
-    "Revue de business plans",
-    "Structuration de montages financiers",
-    "Structuration de carve-outs, d’assets-deals, etc.",
+    t.savoir_faire.parity_calculus,
+    t.savoir_faire.bp_review,
+    t.savoir_faire.structuring_fin,
+    t.savoir_faire.strucutring_deal,
   ];
 
   return (
@@ -24,10 +25,10 @@ export default async function Savoir({ params }) {
         </div>
         <div className="2xl:block 2xl:m-auto 3xl:pt-20">
           <div className="flex lg:h-fit justify-center items-center lg:items-start w-full gap-14 lg:gap-0 lg:justify-evenly my-20 2xl:item flex-col lg:flex-row flex-wrap">
-            <ProjectCard />
+            <ProjectCard dict={t.savoir_faire} />
             <div className="px-10 w-4/5 lg:w-2/5 h-full fixed-card pt-10 bg-white flex flex-col">
               <h2 className="text-3xl font-bold pb-5">
-                Évaluation / ingénierie financière
+                {t.savoir_faire.eval_engine}
               </h2>
               <ul className="relative h-auto pb-5">
                 {evaluation.map((item) => (

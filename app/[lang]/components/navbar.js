@@ -1,43 +1,60 @@
-"use client"; 
+"use client";
 import Image from "next/image";
 import Logo from "../../../public/Logo.png";
 import burger from "../../../public/burger.svg";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import France from "../../../public/france.svg";
 import Uk from "../../../public/uk.svg";
 
 export default function Navbar(props) {
-  const pathname = usePathname(); 
-  const t = props.dict; 
-  const router = useRouter(); 
-  const langue = pathname.split('/')[1]
-  const changeLanguage= (e) => {
-    const locale = e.target.value; 
-    const segments = pathname.split('/');
+  const pathname = usePathname();
+  const t = props.dict;
+  const router = useRouter();
+  const langue = pathname.split("/")[1];
+  const [isActive, setIsActive] = useState(false);
+  const submenuRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isActive) {
+        if (submenuRef.current && !submenuRef.current.contains(event.target)) {
+          setIsActive(false);
+        }
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isActive]);
+  const changeLanguage = (e) => {
+    const locale = e.target.value;
+    const segments = pathname.split("/");
     segments[1] = locale;
     document.cookie = `NEXT_LOCALE=${locale}; path=/`;
-    router.push(segments.join('/')); 
-  }; 
+    router.push(segments.join("/"));
+  };
 
   const handleClick = () => {
-    const submenu = document.getElementById("submenu");
-    if (submenu.style.visibility == "visible") {
-      submenu.style.visibility = "hidden";
-    } else {
-      submenu.style.visibility = "visible";
-    }
+    isActive ? setIsActive(false) : setIsActive(true);
   };
   return (
     <div className="3xl:flex 3xl:justify-center 3xl:w-full">
       <div className="z-50 px-6 sm:px-14 md:px-28  fixed  w-full 3xl:w-150  3xl:px-0 top-[49px]">
         <div className=" relative  bg-card/30 rounded-3xl nav-style">
           <div className="hidden xl:flex flex-row justify-between py-2 px-14 ">
-            <Link href={`/${langue}`} >
+            <Link href={`/${langue}`}>
               <Image className="logo" src={Logo} />
             </Link>
-            <select onChange={changeLanguage} className="lang-select absolute left-56 top-8" defaultValue={langue}>
+            <select
+              onChange={changeLanguage}
+              className="lang-select absolute left-56 top-8"
+              defaultValue={langue}
+            >
               <option value="fr">🇫🇷</option>
               <option value="en">🇬🇧</option>
             </select>
@@ -51,7 +68,7 @@ export default function Navbar(props) {
                         : "text-tertiary font-light hover:text-text"
                     }
                   >
-                    {t.acceuil}
+                    {t.home}
                   </li>
                 </Link>
                 <Link href={`/${langue}/equipe`}>
@@ -62,7 +79,7 @@ export default function Navbar(props) {
                         : "text-tertiary font-light hover:text-text"
                     }
                   >
-                    {t.equipe}
+                    {t.team}
                   </li>
                 </Link>
                 <Link href={`/${langue}/savoir-faire`}>
@@ -105,32 +122,46 @@ export default function Navbar(props) {
             <button onClick={handleClick} className="flex-initial">
               <Image src={burger} height={30} width={30} />
             </button>
-            <Link href="" >
+            <Link href="">
               <Image className="logo" src={Logo} />
             </Link>
+            <select
+              onChange={changeLanguage}
+              className="lang-select absolute right-12 top-8"
+              defaultValue={langue}
+            >
+              <option value="fr">🇫🇷</option>
+              <option value="en">🇬🇧</option>
+            </select>
             <div className="w-[30px]"></div>
+
             <div
               id="submenu"
-              className="absolute bg-card rounded-2xl border-1 pl-5 pr-10 py-5 invisible left-0 top-20"
+              ref={submenuRef}
+              className={
+                isActive
+                  ? "visible absolute z-50 w-72 rounded-md flex flex-col gap-1 shadow-xl border border-slate-200 bg-background backdrop-blur-lg p-2 left-0 top-20"
+                  : "hidden"
+              }
             >
               <ul className="flex flex-col gap-2 text-lg ">
                 <Link href="/">
                   <li
                     className={
                       props.isActive == 0
-                        ? "text-text font-semibold"
-                        : "text-tertiary font-light hover:text-text"
+                        ? "cursor-pointer hover:bg-secondary/85 bg-secondary/70 px-3 py-2 rounded-sm"
+                        : "cursor-pointer hover:bg-slate-200 px-3 py-2 rounded-sm"
                     }
                   >
-                    {t.accueil}
+                    {t.home}
                   </li>
                 </Link>
                 <Link href="/equipe">
                   <li
                     className={
                       props.isActive == 1
-                        ? "text-text font-semibold"
-                        : "text-tertiary font-light hover:text-text"
+                        ? "cursor-pointer hover:bg-secondary/85 bg-secondary/70 px-3 py-2 rounded-sm"
+                        : "cursor-pointer hover:bg-slate-200 px-3 py-2 rounded-sm"
                     }
                   >
                     {t.team}
@@ -140,8 +171,8 @@ export default function Navbar(props) {
                   <li
                     className={
                       props.isActive == 2
-                        ? "text-text font-semibold"
-                        : "text-tertiary font-light hover:text-text"
+                        ? "cursor-pointer hover:bg-secondary/85 bg-secondary/70 px-3 py-2 rounded-sm"
+                        : "cursor-pointer hover:bg-slate-200 px-3 py-2 rounded-sm"
                     }
                   >
                     {t.savoir_faire}
@@ -151,8 +182,8 @@ export default function Navbar(props) {
                   <li
                     className={
                       props.isActive == 3
-                        ? "text-text font-semibold"
-                        : "text-tertiary font-light hover:text-text"
+                        ? "cursor-pointer hover:bg-secondary/85 bg-secondary/70 px-3 py-2 rounded-sm"
+                        : "cursor-pointer hover:bg-slate-200 px-3 py-2 rounded-sm"
                     }
                   >
                     {t.realisations}
@@ -162,8 +193,8 @@ export default function Navbar(props) {
                   <li
                     className={
                       props.isActive == 4
-                        ? "text-text font-semibold"
-                        : "text-tertiary font-light hover:text-text"
+                        ? "cursor-pointer hover:bg-secondary/85 bg-secondary/70 px-3 py-2 rounded-sm"
+                        : "cursor-pointer hover:bg-slate-200 px-3 py-2 rounded-sm"
                     }
                   >
                     {t.contact}

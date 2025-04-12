@@ -1,10 +1,9 @@
-
 import Navbar from "../components/navbar";
 import CTA from "../components/cta";
 import { getDictionary } from "../dictionaries";
 import Footer from "../components/footer";
-export default async function Missions({params}) {
-  let t = await getDictionary(params.lang)
+export default async function Missions({ params }) {
+  let t = await getDictionary(params.lang);
   return (
     <>
       <Navbar isActive="3" dict={t.navbar} lang={params.lang} />
@@ -32,7 +31,7 @@ export default async function Missions({params}) {
                 4
               </div>
               <p className="text-center">{t.realisations.element1_titre}</p>
-              <p className="italic text-tertiary">
+              <p className="italic text-tertiary lg:max-w-[25rem] lg:text-wrap lg:text-center">
                 {t.realisations.element1_des}
               </p>
             </div>
@@ -42,7 +41,7 @@ export default async function Missions({params}) {
                 5
               </div>
               <p className="text-center">{t.realisations.element2_titre}</p>
-              <p className="italic text-tertiary">
+              <p className="italic text-tertiary lg:max-w-[25rem] lg:text-wrap lg:text-center">
                 {t.realisations.element2_des}
               </p>
             </div>
@@ -52,7 +51,7 @@ export default async function Missions({params}) {
                 7
               </div>
               <p className="text-center">{t.realisations.element3_titre}</p>
-              <p className="italic text-tertiary">
+              <p className="italic text-tertiary lg:max-w-[25rem] lg:text-wrap lg:text-center">
                 {t.realisations.element3_des}
               </p>
             </div>
@@ -63,7 +62,7 @@ export default async function Missions({params}) {
               </div>
 
               <p className="text-center">{t.realisations.element4_titre}</p>
-              <p className="italic text-tertiary">
+              <p className="italic text-tertiary lg:max-w-[25rem] lg:text-wrap lg:text-center">
                 {t.realisations.element4_des}
               </p>
             </div>
