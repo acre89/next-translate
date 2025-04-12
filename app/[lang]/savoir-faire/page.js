@@ -23,9 +23,9 @@ export default async function Savoir({ params }) {
           <h1 className="title-h1">{t.savoir_faire.titre}</h1>
         </div>
         <div className="2xl:block 2xl:m-auto 3xl:pt-20">
-          <div className="flex h-fit justify-evenly my-20 2xl:item flex-row  flex-nowrap">
+          <div className="flex lg:h-fit justify-center items-center lg:items-start w-full gap-14 lg:gap-0 lg:justify-evenly my-20 2xl:item flex-col lg:flex-row flex-wrap">
             <ProjectCard />
-            <div className="px-10  w-2/5 h-full fixed-card pt-10 bg-white flex flex-col">
+            <div className="px-10 w-4/5 lg:w-2/5 h-full fixed-card pt-10 bg-white flex flex-col">
               <h2 className="text-3xl font-bold pb-5">
                 Évaluation / ingénierie financière
               </h2>
@@ -38,7 +38,7 @@ export default async function Savoir({ params }) {
           </div>
         </div>
       </div>
-      <CTA dict={t.cta} lang={params.lang} />
+      <CTA className="mt-10" dict={t.cta} lang={params.lang} />
       <Footer dict={t.footer} />
     </>
   );
