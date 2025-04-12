@@ -2,22 +2,24 @@
 import { useState } from "react";
 import Select from "./select";
 
-export default function ProjectCard({ params }) {
+export default function ProjectCard({ params, dict }) {
+  let savoir_faire = dict;
+
   const acquisition = [
-    "Identification et approche des cibles",
-    "Analyse financière et stratégique des cibles",
-    "Préparation des lettres d’intention",
-    "Assistance dans la négociation de la structuration financière et juridique de l’acquisition (prix, garantie de passif, etc.)",
-    "Suivi des audits et de la préparation de la documentation juridique",
+    savoir_faire.acquisition_targeting,
+    savoir_faire.acquisition_analysis,
+    savoir_faire.acquisition_loi,
+    savoir_faire.acquisition_negotiation,
+    savoir_faire.acquisition_due_diligence,
   ];
 
   const cession = [
-    "Préparation de l’ensemble des documents d’information de l’opération (info-mémos, teasers, BP, organisation de la data room…).",
-    "Identification et approche des acquéreurs potentiels",
-    "Assistance dans la négociation des offres reçues lors des étapes successives du process (prix, garanties, modalités de paiement, etc.) ",
-    "Suivi des audits et de la rédaction de la documentation juridique jusqu’au closing.",
+    savoir_faire.cession_docs_preparation,
+    savoir_faire.cession_targeting,
+    savoir_faire.cession_negotiation,
+    savoir_faire.cession_due_diligence,
   ];
-  const titles = ["Projet d'acquisition", "Projets de cession"];
+  const titles = [savoir_faire.acquisition_title, savoir_faire.cession_title];
   const [activeList, setActiveList] = useState(acquisition);
 
   async function handleChangeProject(id) {
@@ -38,7 +40,7 @@ export default function ProjectCard({ params }) {
     <>
       <div className="fixed-card lg:w-2/5 w-4/5 p-10 bg-white">
         <h2 className="text-3xl mb-5 font-bold">
-          Projets d'acquisition et de cession
+          {savoir_faire.acquisition_cession_title}
         </h2>
         <div className="mb-5 w-fit bg-neutral-200 rounded relative hidden xl:flex">
           <div className="selector" id="selector"></div>
@@ -51,7 +53,7 @@ export default function ProjectCard({ params }) {
               id="first-h2"
               className="text-xl w-[240px] font-bold text-center  "
             >
-              Projets d'acquisitions
+              {savoir_faire.acquisition_title}
             </h3>
           </button>
           <button
@@ -63,7 +65,7 @@ export default function ProjectCard({ params }) {
               id="second-h2"
               className=" text-xl w-[240px] font-bold text-center "
             >
-              Projets de cessions
+              {savoir_faire.cession_title}
             </h3>
           </button>
         </div>

@@ -28,7 +28,7 @@ export default function Select({ options, onChange, init }) {
           <span className="pl-3">
             <Image
               src={arrow}
-              className={isOpen ? "selected-arrow" : "animate-arrow"}
+              className={isOpen ? "selected-arrow" : "down-arrow"}
               height={12}
               width={6}
             />

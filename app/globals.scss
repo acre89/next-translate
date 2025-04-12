@@ -400,8 +400,11 @@ label {
 .animate-dart {
   transform: translateX(20px);
 }
-
 .selected-arrow {
   transform: rotate(-90deg);
-  transition: all 0.5s ease;
+  transition: all 0.2s ease-in;
+}
+.down-arrow {
+  transform: rotate(90deg);
+  transition: all 0.2s ease-out;
 }
