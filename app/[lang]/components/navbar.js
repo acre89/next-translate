@@ -64,7 +64,7 @@ export default function Navbar(props) {
                   <li
                     className={
                       props.isActive == 0
-                        ? "text-text font-semibold"
+                        ? "text-text font-semibold active-nav"
                         : "text-tertiary font-light hover:text-text"
                     }
                   >
@@ -75,7 +75,7 @@ export default function Navbar(props) {
                   <li
                     className={
                       props.isActive == 1
-                        ? "text-text font-semibold"
+                        ? "text-text font-semibold active-nav"
                         : "text-tertiary font-light hover:text-text"
                     }
                   >
@@ -86,7 +86,7 @@ export default function Navbar(props) {
                   <li
                     className={
                       props.isActive == 2
-                        ? "text-text font-semibold"
+                        ? "text-text font-semibold active-nav"
                         : "text-tertiary font-light hover:text-text"
                     }
                   >
@@ -97,7 +97,7 @@ export default function Navbar(props) {
                   <li
                     className={
                       props.isActive == 3
-                        ? "text-text font-semibold"
+                        ? "text-text font-semibold active-nav"
                         : "text-tertiary font-light hover:text-text"
                     }
                   >
@@ -108,7 +108,7 @@ export default function Navbar(props) {
                   <li
                     className={
                       props.isActive == 4
-                        ? "text-text font-semibold"
+                        ? "text-text font-semibold active-nav"
                         : "text-tertiary font-light hover:text-text"
                     }
                   >

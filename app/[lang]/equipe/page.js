@@ -17,8 +17,8 @@ export default async function Equipe({ params }) {
               {t.equipe.titre}
             </h1>
             <div className="flex flex-row justify-evenly">
-              <div className="flex flex-col lg:flex-row relative items-center gap-10  pr-7 bg-white h-fill w-full fixed-card">
-                <div className="relative ">
+              <div className="flex flex-col lg:flex-row relative items-center gap-10  md:pr-7 bg-white h-fill w-full fixed-card">
+                <div className="relative mt-10 lg:mt-0">
                   <Image className="profile-image " src={profile_picture} />
                   <div className="absolute  w-full flex justify-center bottom-0 h-1/2 items-end profile-image-gradient"></div>
                   <h3 className="absolute  w-full text-white pb-4 bottom-0 text-center text-2xl italic nom">
@@ -26,7 +26,7 @@ export default async function Equipe({ params }) {
                   </h3>
                 </div>
 
-                <p className="w-3/4">
+                <p className="px-8 md:px-0 md:w-3/4 text-center lg:text-left mb-10 lg:mb-0">
                   {t.equipe.description}
                   <br />
                   <br />
@@ -38,8 +38,8 @@ export default async function Equipe({ params }) {
           </div>
         </div>
       </div>
-        <CTA dict={t.cta} />
-        <Footer dict={t.footer} />
+      <CTA dict={t.cta} />
+      <Footer dict={t.footer} />
     </>
   );
 }
