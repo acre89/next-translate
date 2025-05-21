@@ -1,16 +1,16 @@
-
 // import Navbar from "./components/navbar";
 import Image from "next/image";
 import brain from "../../public/brain.svg";
 import dart from "../../public/dart.svg";
 import users from "../../public/users.svg";
 import arrow from "../../public/Arrow.svg";
-import { getDictionary } from './dictionaries'
+import { getDictionary } from "./dictionaries";
 import Navbar from "./components/navbar";
 import CTA from "./components/cta";
 import Footer from "./components/footer";
-export default async function Home({params}) {
-  let t = await getDictionary(params.lang)
+import AnimatedTitle from "./components/animatedTitle";
+export default async function Home({ params }) {
+  let t = await getDictionary(params.lang);
   return (
     <>
       <div className="">
@@ -19,9 +19,11 @@ export default async function Home({params}) {
           <div className=" 2xl:w-[1536px] 2xl:m-auto relative ">
             <div className="px-6 sm:px-14 md:px-28 ">
               <div className="pt-48 3xl:pt-96">
-                <h1 className="text-text text-5xl font-bold card">
+                <AnimatedTitle dico={t.animated_title} />
+                <h1 className="text-text text-5xl font-bold card mt-3">
                   {t.accueil.titre}
                 </h1>
+
                 <button className="contact-button pt-7 text-lg ">
                   <div className="flex flex-row gap-4 px-4 py-2.5 items-center border border-black">
                     <p>{t.cta.button}</p>
@@ -69,9 +71,9 @@ export default async function Home({params}) {
         </div>
         <div
           id="more"
-          className="w-full bg-background 2xl:w-[1536px] 2xl:m-auto relative  px-6 sm:px-14 md:px-28 pb-10 xl:pb-0 xl:h-screen"
+          className="w-full bg-background 2xl:w-[1536px] 2xl:m-auto relative  px-6 sm:px-14 2xl:px-28 pb-10 xl:pb-0 xl:h-screen"
         >
-          <div className="flex pt-56 flex-col gap-10 xl:gap-0 items-center w-full 2xl:mt-16 3xl:mt-32  xl:items-stretch xl:flex-row justify-between ">
+          <div className="flex pt-56 flex-col gap-10 xl:gap-4 items-center w-full 2xl:mt-16 3xl:mt-32  xl:items-stretch xl:flex-row justify-between ">
             <a href="/equipe">
               <div className="animate-card relative w-[350px] sm:w-96 bg-white px-6 pt-7 pb-7 xl:pb-0">
                 <Image src={users} height={70} width={53} />
@@ -151,4 +153,3 @@ export default async function Home({params}) {
     </>
   );
 }
-

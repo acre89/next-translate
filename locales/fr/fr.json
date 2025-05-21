@@ -15,8 +15,14 @@
     "cgu": "CGU",
     "mentions": "Mentions légales"
   },
+  "animated_title": {
+    "council": "Conseil en",
+    "acquisition": "Acquisition",
+    "cession": "Cession",
+    "fusion": "Fusion"
+  },
   "accueil": {
-    "titre": "Conseil M&A | Évaluation indépendante",
+    "titre": "Évaluation indépendante",
     "sous_titre": "Une question ? Besoin d'un renseignement ?",
     "plus": "En savoir plus",
     "decouvrir": "Nous découvrir",

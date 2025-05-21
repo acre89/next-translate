@@ -6,6 +6,12 @@
     "realisations": "References",
     "contact": "Contact us"
   },
+  "animated_title": {
+    "council": "Consulting in",
+    "acquisition": "Acquisition",
+    "cession": "Sale",
+    "fusion": "Merger"
+  },
   "cta": {
     "titre": "Any questions?",
     "text": "We look forward to hearing about your projects.",
@@ -16,7 +22,7 @@
     "mentions": "Terms of use"
   },
   "accueil": {
-    "titre": "M&A Consulting | Independent Valuation",
+    "titre": "Independent Valuation",
     "sous_titre": "Have a question? Need more information?",
     "plus": "More",
     "decouvrir": "About us",
@@ -46,12 +52,12 @@
     "acquisition_targeting": "Identification and approach of targets",
     "acquisition_analysis": "Financial and strategic analysis of targets",
     "acquisition_loi": "Preparation of letters of intent",
-    "acquisition_negotiation": "Assistance in negotiating the financial and legal structure of the acquisition (price, liability guarantee, etc.)",
+    "acquisition_negotiation": "Assistance in negotiating the financial and legal structure of the acquisition (price, reps and warranties, etc.)",
     "acquisition_due_diligence": "Monitoring of audits and preparation of legal documentation",
     "cession_docs_preparation": "Preparation of all transaction documents (info memos, teasers, business plan, data room setup, etc.)",
     "cession_targeting": "Identification and approach of potential buyers",
     "cession_negotiation": "Assistance in negotiating offers received during the successive stages of the process (price, guarantees, payment terms, etc.)",
-    "cession_due_diligence": "Monitoring of audits and drafting of legal documentation through to closing",
+    "cession_due_diligence": "Monitoring of audits and preparation of legal documentation through to closing",
     "acquisition_cession_title": "Acquisition and disposal projects"
   },
   "realisations": {

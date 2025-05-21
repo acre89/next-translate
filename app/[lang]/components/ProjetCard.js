@@ -42,32 +42,34 @@ export default function ProjectCard({ params, dict }) {
         <h2 className="text-3xl mb-5 font-bold">
           {savoir_faire.acquisition_cession_title}
         </h2>
-        <div className="mb-5 w-fit bg-neutral-200 rounded relative hidden xl:flex">
-          <div className="selector" id="selector"></div>
-          <button
-            className="change z-10"
-            id="acquisition"
-            onClick={() => handleChangeProject(0)}
-          >
-            <h3
-              id="first-h2"
-              className="text-xl w-[240px] font-bold text-center  "
+        <div className="xl:flex xl:justify-center xl:w-full 2xl:justify-start">
+          <div className="mb-5 w-fit bg-neutral-200 rounded relative hidden xl:flex ">
+            <div className="selector" id="selector"></div>
+            <button
+              className="change z-10"
+              id="acquisition"
+              onClick={() => handleChangeProject(0)}
             >
-              {savoir_faire.acquisition_title}
-            </h3>
-          </button>
-          <button
-            className="change z-10"
-            id="cession"
-            onClick={() => handleChangeProject(1)}
-          >
-            <h3
-              id="second-h2"
-              className=" text-xl w-[240px] font-bold text-center "
+              <h3
+                id="first-h2"
+                className="text-xl w-[240px] font-bold text-center  "
+              >
+                {savoir_faire.acquisition_title}
+              </h3>
+            </button>
+            <button
+              className="change z-10"
+              id="cession"
+              onClick={() => handleChangeProject(1)}
             >
-              {savoir_faire.cession_title}
-            </h3>
-          </button>
+              <h3
+                id="second-h2"
+                className=" text-xl w-[240px] font-bold text-center "
+              >
+                {savoir_faire.cession_title}
+              </h3>
+            </button>
+          </div>
         </div>
         <div className="visible xl:hidden">
           <Select
