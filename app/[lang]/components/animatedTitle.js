@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function AnimatedTitle(props) {
   const t = props.dico;
-  const titles = [t.fusion, t.acquisition, t.cession];
+  const titles = [t.acquisition, t.fusion, t.cession];
 
   const [index, setIndex] = useState(0);
 
@@ -16,9 +16,9 @@ export default function AnimatedTitle(props) {
   }, []);
 
   return (
-    <h1 className="text-text text-5xl font-bold flex items-center space-x-2 h-12">
+    <h1 className="text-text text-5xl font-bold  flex flex-col md:flex-row md:items-center md:space-x-2 h-12">
       <span>{t.council}</span>
-      <div className="relative text-zinc-600 w-fit text-nowrap h-12">
+      <div className="relative text-zinc-600 w-fit text-wrap h-fit md:h-12">
         <AnimatePresence mode="wait">
           <motion.span
             key={titles[index]}

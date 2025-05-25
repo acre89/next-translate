@@ -20,7 +20,7 @@ export default async function Home({ params }) {
             <div className="px-6 sm:px-14 md:px-28 ">
               <div className="pt-48 3xl:pt-96">
                 <AnimatedTitle dico={t.animated_title} />
-                <h1 className="text-text text-5xl font-bold card mt-3">
+                <h1 className="text-text text-5xl font-bold card mt-20 md:mt-3">
                   {t.accueil.titre}
                 </h1>
 

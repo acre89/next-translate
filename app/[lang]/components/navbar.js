@@ -145,7 +145,7 @@ export default function Navbar(props) {
               }
             >
               <ul className="flex flex-col gap-2 text-lg ">
-                <Link href="/">
+                <Link href={`/${langue}`}>
                   <li
                     className={
                       props.isActive == 0
@@ -156,7 +156,7 @@ export default function Navbar(props) {
                     {t.home}
                   </li>
                 </Link>
-                <Link href="/equipe">
+                <Link href={`/${langue}/equipe`}>
                   <li
                     className={
                       props.isActive == 1
@@ -167,7 +167,7 @@ export default function Navbar(props) {
                     {t.team}
                   </li>
                 </Link>
-                <Link href="/savoir-faire">
+                <Link href={`/${langue}/savoir-faire`}>
                   <li
                     className={
                       props.isActive == 2
@@ -178,7 +178,7 @@ export default function Navbar(props) {
                     {t.savoir_faire}
                   </li>
                 </Link>
-                <Link href="/realisations">
+                <Link href={`/${langue}/realisations`}>
                   <li
                     className={
                       props.isActive == 3
@@ -189,7 +189,7 @@ export default function Navbar(props) {
                     {t.realisations}
                   </li>
                 </Link>
-                <Link href="/contact">
+                <Link href={`/${langue}/contact`}>
                   <li
                     className={
                       props.isActive == 4
