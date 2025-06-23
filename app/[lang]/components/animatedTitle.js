@@ -16,9 +16,9 @@ export default function AnimatedTitle(props) {
   }, []);
 
   return (
-    <h1 className="text-text text-5xl font-bold  flex flex-col md:flex-row md:items-center md:space-x-2 h-12">
+    <h1 className="text-text text-4xl md:text-5xl font-bold  flex flex-col md:flex-row md:items-center md:space-x-2 h-12">
       <span>{t.council}</span>
-      <div className="relative text-zinc-600 w-fit text-wrap h-fit md:h-12">
+      <div className="relative text-zinc-600 w-fit text-nowrap h-fit md:h-12">
         <AnimatePresence mode="wait">
           <motion.span
             key={titles[index]}
@@ -26,7 +26,7 @@ export default function AnimatedTitle(props) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 20, opacity: 0 }}
             transition={{ duration: 1 }}
-            className="absolute left-1 top-0"
+            className="absolute md:left-1 top-0"
           >
             {titles[index]}
           </motion.span>

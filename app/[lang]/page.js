@@ -17,10 +17,10 @@ export default async function Home({ params }) {
         <Navbar isActive="0" dict={t.navbar} />
         <div className="home-page h-screen max-w-[100vw] overflow-x-hidden">
           <div className=" 2xl:w-[1536px] 2xl:m-auto relative ">
-            <div className="px-6 sm:px-14 md:px-28 ">
+            <div className="pl-6 sm:pl-14 md:pl-28 ">
               <div className="pt-48 3xl:pt-96">
                 <AnimatedTitle dico={t.animated_title} />
-                <h1 className="text-text text-5xl font-bold card mt-20 md:mt-3">
+                <h1 className="text-text text-4xl md:text-5xl font-bold card mt-20 md:mt-3">
                   {t.accueil.titre}
                 </h1>
 
