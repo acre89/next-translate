@@ -10,7 +10,25 @@ const initValues = {
 export default function Form(props) {
   let t = props.dico;
   const [state, setState] = useState({ values: initValues });
+  const [status, setStatus] = useState("");
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Envoi en cours...");
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(values),
+    });
+
+    if (res.ok) {
+      setStatus("Message envoyé !");
+      setState({values: initValues});
+    } else {
+      setStatus("Erreur lors de l’envoi.");
+    }
+  };
   const { values } = state;
 
   const handleChange = ({ target }) => {
@@ -25,7 +43,7 @@ export default function Form(props) {
   };
   return (
     <>
-      <form className="sm:px-20 px-10 pt-14">
+      <form className="sm:px-20 px-10 pt-14" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row w-full justify-between">
           <div className="flex flex-col input-container relative">
             <label
@@ -92,7 +110,7 @@ export default function Form(props) {
             className="w-full resize-none p-2 border focus:outline-none pl-3 focus:border-text border-tertiary bg-white"
           />
         </div>
-        <button className="pt-10 pb-14 ">{t.contact.send}</button>
+        <button className="pt-10 pb-14 " type="submit">{status ? status : "Envoyer"}</button>
       </form>
     </>
   );
