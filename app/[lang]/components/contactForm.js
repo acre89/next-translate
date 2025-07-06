@@ -14,7 +14,7 @@ export default function Form(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Envoi en cours...");
+    setStatus("sending");
 
     const res = await fetch("/api/contact", {
       method: "POST",
@@ -23,10 +23,10 @@ export default function Form(props) {
     });
 
     if (res.ok) {
-      setStatus("Message envoyé !");
+      setStatus("sent");
       setState({values: initValues});
     } else {
-      setStatus("Erreur lors de l’envoi.");
+      setStatus("error");
     }
   };
   const { values } = state;
@@ -39,7 +39,7 @@ export default function Form(props) {
         [target.name]: target.value,
       },
     }));
-    console.log(values.message);
+    setStatus("");
   };
   return (
     <>
@@ -59,6 +59,7 @@ export default function Form(props) {
               value={values.nom}
               onChange={handleChange}
               className="w-full md:w-56 p-2 border focus:outline-none pl-3 focus:border-text border-tertiary bg-white"
+              required
             />
           </div>
           <div className="flex flex-col mt-10 md:mt-0 input-container relative">
@@ -75,6 +76,7 @@ export default function Form(props) {
               value={values.prenom}
               onChange={handleChange}
               className="w-full md:w-56 p-2 border focus:outline-none pl-3 focus:border-text border-tertiary bg-white"
+              required
             />
           </div>
         </div>
@@ -92,6 +94,7 @@ export default function Form(props) {
             value={values.email}
             onChange={handleChange}
             className=" p-2 border focus:outline-none pl-3 focus:border-text border-tertiary bg-white"
+            required
           />
         </div>
         <div className="flex flex-col input-container relative mt-10 ">
@@ -108,9 +111,48 @@ export default function Form(props) {
             value={values.message}
             onChange={handleChange}
             className="w-full resize-none p-2 border focus:outline-none pl-3 focus:border-text border-tertiary bg-white"
+            required
           />
         </div>
-        <button className="pt-10 pb-14 " type="submit">{status ? status : "Envoyer"}</button>
+        
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className={`flex items-center justify-center gap-2 px-4 my-7 py-2 text-white rounded-sm
+          ${status === "sent" ? "bg-green-600" : status === "error" ? "bg-red-600" : "bg-primary"}
+          ${status === "sending" ? "opacity-70 cursor-not-allowed" : ""}
+        `}
+      >
+        {status === "sending" && (
+          <svg
+            className="w-4 h-4 animate-spin text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            />
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+            />
+          </svg>
+        )}
+        {status === "sending"
+          ? t.contact.sending
+          : status === "sent"
+          ? t.contact.sent
+          : status === "error"
+          ? t.contact.error
+          : t.contact.envoyer}
+      </button>
       </form>
     </>
   );

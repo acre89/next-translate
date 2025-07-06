@@ -77,6 +77,9 @@
     "description": "Nous serons très heureux de prendre connaissance de vos projets. Notre adresse mail est contact@dleafinance.fr ou vous pouvez nous contacter via le formulaire ci-dessous :",
     "nom": "Nom",
     "prenom": "Prénom",
-    "envoyer": "Envoyer"
+    "envoyer": "Envoyer", 
+    "sending": "Envoi ...",
+    "sent": "Envoyé !", 
+    "error": "Erreur lors de l’envoi."
   }
 }

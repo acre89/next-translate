@@ -77,6 +77,9 @@
     "description": "We look forward to hearing about your projects. Our e-mail address is contact@dleafinance.fr or you can contact us using the form below:",
     "nom": "Last Name",
     "prenom": "First Name",
-    "envoyer": "Send"
+    "envoyer": "Send", 
+    "sending": "Sending ...",
+    "sent": "Sent !", 
+    "error": "Error sending."
   }
 }
