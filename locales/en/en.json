@@ -77,9 +77,38 @@
     "description": "We look forward to hearing about your projects. Our e-mail address is contact@dleafinance.fr or you can contact us using the form below:",
     "nom": "Last Name",
     "prenom": "First Name",
-    "envoyer": "Send", 
+    "envoyer": "Send",
     "sending": "Sending ...",
-    "sent": "Sent !", 
+    "sent": "Sent !",
     "error": "Error sending."
+  },
+  "cgu": {
+    "titre": "Terms of Use",
+    "intro": "Welcome to our company showcase site. By using our contact form, you agree to these Terms of Use.",
+    "objet_titre": "Article 1: Purpose",
+    "objet": "These Terms govern the use of this company presentation site and its contact form.",
+    "utilisation_titre": "Article 2: Access and Use",
+    "utilisation": "Access to this site is free. Users agree not to disrupt its functioning.",
+    "donnees_titre": "Article 3: Personal Data",
+    "donnees": "Data submitted via the form (name, email, message) is used only to respond to your inquiries and retained for 1 year. You have the right to access, correct, or delete your data.",
+    "propriete_titre": "Article 4: Intellectual Property",
+    "propriete": "All content (text, images, logos…) is protected and owned by the company. Any reproduction is prohibited without permission.",
+    "responsabilite_titre": "Article 5: Liability",
+    "responsabilite": "We do not guarantee the accuracy of the information. We disclaim any liability for damages resulting from the use of the site.",
+    "droit_titre": "Article 6: Governing Law",
+    "droit": "These Terms are governed by French law. Any dispute shall be submitted to the competent courts."
+  },
+  "mention_legale": {
+    "titre": "Legal Notice",
+    "identite_titre": "Publisher Identification",
+    "identite": "DLEA Finance – 52b boulevard Saint-Jacques - 75014 Paris – ldurante@dleafinance.fr – SIREN 527705701",
+    "hebergeur_titre": "Hosting",
+    "hebergeur": "OVH – 2 Kellermann Street, 59100 Roubaix – +33 9 72 10 10 07",
+    "propriete_titre": "Intellectual Property",
+    "propriete": "Content (texts, images, logos…) is protected. Any reproduction is prohibited without permission.",
+    "donnees_titre": "Personal Data",
+    "donnees": "Data from the form are processed under GDPR. See the Terms of Use page for details.",
+    "droit_titre": "Governing Law",
+    "droit": "These legal notices are governed by French law."
   }
 }

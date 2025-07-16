@@ -77,9 +77,38 @@
     "description": "Nous serons très heureux de prendre connaissance de vos projets. Notre adresse mail est contact@dleafinance.fr ou vous pouvez nous contacter via le formulaire ci-dessous :",
     "nom": "Nom",
     "prenom": "Prénom",
-    "envoyer": "Envoyer", 
+    "envoyer": "Envoyer",
     "sending": "Envoi ...",
-    "sent": "Envoyé !", 
+    "sent": "Envoyé !",
     "error": "Erreur lors de l’envoi."
+  },
+  "cgu": {
+    "titre": "Conditions Générales d’Utilisation",
+    "intro": "Bienvenue sur notre site vitrine. En utilisant notre formulaire de contact, vous acceptez ces CGU.",
+    "objet_titre": "Article 1 : Objet",
+    "objet": "Les présentes CGU régissent l’usage de ce site de présentation d’entreprise et de son formulaire de contact.",
+    "utilisation_titre": "Article 2 : Accès et utilisation",
+    "utilisation": "L’accès au site est gratuit. L’utilisateur s’engage à ne pas perturber son fonctionnement.",
+    "donnees_titre": "Article 3 : Données personnelles",
+    "donnees": "Les données envoyées via le formulaire (nom, e‑mail, message) sont utilisées uniquement pour répondre à vos demandes et conservées 1 an. Vous disposez d’un droit d’accès, de rectification et de suppression.",
+    "propriete_titre": "Article 4 : Propriété intellectuelle",
+    "propriete": "Tous contenus (textes, images, logos…) sont protégés et appartiennent à l’entreprise. Toute reproduction est interdite sans autorisation.",
+    "responsabilite_titre": "Article 5 : Responsabilité",
+    "responsabilite": "Nous ne garantissons pas l’exactitude des informations. Nous déclinons toute responsabilité en cas de dommages résultant de l’usage du site.",
+    "droit_titre": "Article 6 : Droit applicable",
+    "droit": "Ces CGU sont régies par le droit français. Tout litige sera soumis aux tribunaux compétents."
+  },
+  "mention_legale": {
+    "titre": "Mentions Légales",
+    "identite_titre": "Identification de l’éditeur",
+    "identite": "DLEA Finance – 52b boulevard Saint-Jacques - 75014 Paris – ldurante@dleafinance.fr – SIREN 527705701",
+    "hebergeur_titre": "Hébergeur",
+    "hebergeur": "OVH – 2 rue Kellermann, 59100 Roubaix – 09 72 10 10 07",
+    "propriete_titre": "Propriété intellectuelle",
+    "propriete": "Le contenu (textes, images, logos…) est protégé. Toute reproduction est interdite sans autorisation.",
+    "donnees_titre": "Données personnelles",
+    "donnees": "Les données du formulaire sont traitées selon le RGPD. Consultez la page CGU pour plus d’infos.",
+    "droit_titre": "Droit applicable",
+    "droit": "Ces mentions sont régies par le droit français."
   }
 }

@@ -1,4 +1,3 @@
-
 export default function CTA(props) {
   const t = props.dict;
   return (
