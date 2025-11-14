@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
@@ -17,8 +17,8 @@ export async function POST(req) {
   try {
     await transporter.sendMail({
       from: `"${prenom} ${nom}" <${email}>`,
-      to: "ajlcresci@gmail.com", // l'adresse qui recevra les messages
-      subject: "Nouveau message depuis le formulaire de contact",
+      to: "ldurante@dleafinance.fr", // l'adresse qui recevra les messages
+      subject: `Nouveau message de "${prenom} ${nom}" <${email}>`,
       text: message,
       html: `<p>${message}</p>`,
     });
